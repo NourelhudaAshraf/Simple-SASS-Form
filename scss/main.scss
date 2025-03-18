@@ -1,0 +1,46 @@
+@use "../Layout/columns.scss" as cols;
+@use "../Layout/grid.scss" as grid;
+
+@include cols.Columns();
+@include cols.Columns(12, "sm", 0px);
+@include cols.Columns(12, "md", 768px);
+@include cols.Columns(12, "lg", 992px);
+@include grid.Rows();
+@include grid.Containers();
+
+body {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 176, 201);
+}
+.hold {
+  background-color: aliceblue;
+  border-radius: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 18rem;
+}
+label {
+  font-weight: 500;
+}
+button {
+  background-color: rgb(23, 5, 61);
+  color: white;
+  height: 30px;
+  font-size: large;
+  border-radius: 10px;
+  border-color: rgb(23, 5, 61);
+}
+.items {
+  max-width: fit-content;
+  margin: 0 auto;
+}

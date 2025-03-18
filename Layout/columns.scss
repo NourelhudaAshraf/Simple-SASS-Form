@@ -1,0 +1,21 @@
+@mixin Columns($colNums: 12, $screenName: "", $breakPoint: 0px) {
+  @if ($screenName == "") {
+    @media (min-width: $breakPoint) {
+      @for $i from 1 through $colNums {
+        .col-#{$i} {
+          flex: 0 0 auto;
+          width: $i/$colNums * 100%;
+        }
+      }
+    }
+  } @else {
+    @media (min-width: $breakPoint) {
+      @for $i from 1 through $colNums {
+        .col-#{$screenName}-#{$i} {
+          flex: 0 0 auto;
+          width: $i/$colNums * 100%;
+        }
+      }
+    }
+  }
+}

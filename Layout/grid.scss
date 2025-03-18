@@ -1,0 +1,49 @@
+@mixin Rows() {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    justify-content: center;
+    & > * {
+      flex-shrink: 0;
+      margin-top: 1rem;
+    }
+  }
+}
+@mixin Containers() {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    padding-right: calc(1.5rem * 0.5);
+    padding-left: calc(1.5rem * 0.5);
+    width: 100%;
+  }
+
+  .container,
+  .container-sm {
+    @media (min-width: 0px) {
+      max-width: 380px;
+    }
+    @media (min-width: 768px) {
+      max-width: 720px;
+    }
+    @media (min-width: 992px) {
+      max-width: 960px;
+    }
+  }
+  .container-md {
+    @media (min-width: 768px) {
+      max-width: 720px;
+    }
+    @media (min-width: 992px) {
+      max-width: 960px;
+    }
+  }
+  .container-lg {
+    @media (min-width: 992px) {
+      max-width: 960px;
+    }
+  }
+}
